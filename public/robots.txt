@@ -1,0 +1,34 @@
+# Wilkerson Consulting. Search engines and AI assistants are welcome on the live domain.
+# Preview copies on *.vercel.app send an X-Robots-Tag: noindex header (see vercel.json),
+# so they are crawled but never indexed.
+User-agent: *
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+Sitemap: https://www.wilkersonconsulting.com/sitemap.xml

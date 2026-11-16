@@ -1,0 +1,90 @@
+{
+  "business": {
+    "name": "Wilkerson Consulting",
+    "known_as": "Wilkerson Consulting",
+    "legal_name": "Wilkerson Consulting, LLC",
+    "owner": "Walter Raymond (Ray) Wilkerson, CPA",
+    "owner_goes_by": "Ray",
+    "credential": "CPA, Virginia license #5165 (client-stated; current status to be confirmed, see VERIFY.md)",
+    "street": "",
+    "city": "Reno",
+    "state": "NV",
+    "postal_code": "",
+    "country": "US",
+    "phone": "(407) 488-7464",
+    "phone_accepts_texts": true,
+    "email": "RayFL1654@gmail.com",
+    "website_current": "",
+    "timezone": "America/Los_Angeles",
+    "address_note": "The form gave a street with no city or ZIP. It is not published (on the site or in this public repo) until the client confirms a business address. Public location is Reno, NV."
+  },
+  "online": {
+    "facebook": "",
+    "instagram": "",
+    "google_business_profile": "",
+    "google_review_link": "",
+    "notes": "Client has no Google Business Profile, Facebook, Instagram or other social profiles yet."
+  },
+  "hours": "Call or text any time to set up a consultation.",
+  "areas_served": [
+    "Reno, NV",
+    "Carson City, NV",
+    "Truckee, CA",
+    "Lake Tahoe area, NV & CA (a region, not a town)"
+  ],
+  "services": [
+    "Construction Accounting (WIP & Percentage of Completion)",
+    "Manufacturing Cost Accounting",
+    "Attorney Trust Accounting",
+    "Forensic Accounting for Fraud or Profit/Loss Analysis"
+  ],
+  "booking_system_current": "",
+  "brand": {
+    "colour_main": "#14213D",
+    "colour_accent": "#B8875A",
+    "colours_other": [
+      "#F7F3EC",
+      "#3E5C58"
+    ],
+    "font": "Source Serif 4 (headings) + Inter (body), self-hosted in public/assets/fonts",
+    "notes": "Client gave no colours or fonts (\"???\"). Designer-chosen palette and fonts. Logo: client asked for one to be designed; the site uses a typographic wordmark \"Wilkerson Consulting\" with a simple W mark."
+  },
+  "images": [
+    {
+      "file": "hero-office-desk.jpg",
+      "note": "AI-generated illustration (Higgsfield). Sunlit desk, laptop with unlabeled charts, view of a high desert city and snowy mountains. Home hero. Not the real office."
+    },
+    {
+      "file": "construction-accounting.jpg",
+      "note": "AI-generated illustration (Higgsfield). Job trailer desk with hard hat, blueprints, laptop with a schedule. Construction accounting page and cards."
+    },
+    {
+      "file": "manufacturing-cost-accounting.jpg",
+      "note": "AI-generated illustration (Higgsfield). Office desk with trays of machined parts and a monitor of charts, machine shop behind. Manufacturing page and cards."
+    },
+    {
+      "file": "attorney-trust-accounting.jpg",
+      "note": "AI-generated illustration (Higgsfield). Cloth bound ledgers, folders, fountain pen on a leather desk pad. Attorney trust accounting page and cards."
+    },
+    {
+      "file": "forensic-accounting.jpg",
+      "note": "AI-generated illustration (Higgsfield). Generic hands (no face) comparing highlighted spreadsheet printouts with a loupe. Forensic page and cards. Never present as Ray."
+    },
+    {
+      "file": "logo-wilkerson-consulting.png",
+      "note": "Designer-made typographic wordmark with W mark, transparent background. Used for structured data. Not a client-supplied logo."
+    }
+  ],
+  "photo_video_content": "Client has fewer than 15 photos; none supplied. No Drive assets link given.",
+  "must_keep": "Client wants help establishing his profile in the Reno area after moving from Richmond, VA, where he was well established and known for 30+ years.",
+  "testimonials_source": "Verbatim excerpts from 2 signed recommendation letters (Adam Hoover, W.W. Nash and Sons Inc., June 19, 2025; Jacob D. Favaro, CPA, CFP, Brown Edwards, July 30, 2026). The original letters and emails are private and are not in this repo.",
+  "integrations": {
+    "form_embed": "<iframe\n    src=\"https://api.leadconnectorhq.com/widget/form/OJ5B7pmzppXTu2NxcNj2\"\n    style=\"width:100%;height:100%;border:none;border-radius:10px\"\n    id=\"inline-OJ5B7pmzppXTu2NxcNj2\"\n    data-layout=\"{'id':'INLINE'}\"\n    data-trigger-type=\"alwaysShow\"\n    data-trigger-value=\"\"\n    data-activation-type=\"alwaysActivated\"\n    data-activation-value=\"\"\n    data-deactivation-type=\"neverDeactivate\"\n    data-deactivation-value=\"\"\n    data-form-name=\"Website Form (Wilkerson Consulting)\"\n    data-height=\"543\"\n    data-layout-iframe-id=\"inline-OJ5B7pmzppXTu2NxcNj2\"\n    data-form-id=\"OJ5B7pmzppXTu2NxcNj2\"\n    data-cookie-consent=\"true\"\n    data-cookie-consent-provider=\"auto\"\n    title=\"Website Form (Wilkerson Consulting)\"\n        >\n</iframe>\n<script src=\"https://link.msgsndr.com/js/form_embed.js\"></script>",
+    "chat_widget": "<script src=\"https://widgets.leadconnectorhq.com/loader.js\" data-resources-url=\"https://widgets.leadconnectorhq.com/chat-widget/loader.js\" data-widget-id=\"6afa2d9475f0c3a520e8ebed\"></script>",
+    "review_link": ""
+  },
+  "crm_location_id": "",
+  "vercel_project": "",
+  "preview_url": "",
+  "domain": "www.wilkersonconsulting.com"
+}
