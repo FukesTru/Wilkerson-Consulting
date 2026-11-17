@@ -52,23 +52,63 @@
   "images": [
     {
       "file": "hero-office-desk.jpg",
-      "note": "AI-generated illustration (Higgsfield GPT Image 2.6, Nov 2026). Walnut desk by a window, closed laptop with a dark screen, plain folders, coffee cup, plant, leather chair; high desert city and dry foothills outside, no snow. Home hero. Not the real office."
+      "note": "Illustrative photo (Higgsfield GPT Image 2.6). Used only on / hero. Walnut desk by a window, closed laptop, plain folders, coffee cup, plant; high desert city and dry foothills outside. Not the real office, owner, staff or clients."
     },
     {
       "file": "construction-accounting.jpg",
-      "note": "AI-generated illustration (Higgsfield GPT Image 2.6, Nov 2026). Worn job trailer desk with scuffed hard hat, plain blueprint roll, scale ruler, blank calculator, folders, closed laptop; steel frame on a desert site outside. Construction accounting page and cards."
+      "note": "Illustrative photo (Higgsfield GPT Image 2.6). Used only on /services/construction-accounting/ hero. Worn job trailer desk with hard hat, plain blueprint roll, scale ruler, blank calculator, folders; steel frame on a desert site. Not the real office, owner, staff or clients."
     },
     {
       "file": "manufacturing-cost-accounting.jpg",
-      "note": "AI-generated illustration (Higgsfield GPT Image 2.6, Nov 2026). Shop office desk with plain machined parts in steel trays, notebook, calculator, switched-off monitor; empty worn machine shop beyond. Manufacturing page and cards."
+      "note": "Illustrative photo (Higgsfield GPT Image 2.6). Used only on /services/manufacturing-cost-accounting/ hero. Shop office desk with plain machined parts in trays, notebook, calculator, switched-off monitor; empty machine shop. Not the real office, owner, staff or clients."
     },
     {
       "file": "attorney-trust-accounting.jpg",
-      "note": "AI-generated illustration (Higgsfield GPT Image 2.6, Nov 2026). Blank cloth bound books, wooden tray of plain folders, river stone paperweight, fountain pen on a worn leather blotter; sagebrush outside. Attorney trust accounting page and cards."
+      "note": "Illustrative photo (Higgsfield GPT Image 2.6). Used only on /services/attorney-trust-accounting/ hero. Blank cloth bound books, tray of plain folders, river stone paperweight, fountain pen on a leather blotter. Not the real office, owner, staff or clients."
     },
     {
       "file": "forensic-accounting.jpg",
-      "note": "AI-generated illustration (Higgsfield GPT Image 2.6, Nov 2026). 2 stacks of printed spreadsheet pages with highlighted rows, data unreadable, highlighter and pencil on a worn desk. No hands. Forensic page and cards."
+      "note": "Illustrative photo (Higgsfield GPT Image 2.6). Used only on /services/forensic-accounting/ hero. 2 stacks of spreadsheet printouts with highlighted rows, data unreadable, highlighter and pencil. No hands. Not the real office, owner, staff or clients."
+    },
+    {
+      "file": "services-overview.jpg",
+      "note": "Illustrative photo (Higgsfield GPT Image 2.6). Used only on /services/ hero. Office shelf of plain navy and grey binders and magazine files, trailing pothos, window onto dry hills. Not the real office, owner, staff or clients."
+    },
+    {
+      "file": "about-practice.jpg",
+      "note": "Illustrative photo (Higgsfield GPT Image 2.6). Used only on /about/ hero. Closed navy folder, tortoiseshell reading glasses and fountain pen on a walnut desk; sagebrush outside. Not the real office, owner, staff or clients."
+    },
+    {
+      "file": "what-to-expect.jpg",
+      "note": "Illustrative photo (Higgsfield GPT Image 2.6). Used only on /what-to-expect/ hero. Wooden table with 2 empty mugs, closed notebook and pencil; mid-rise buildings and dry hills outside. Not the real office, owner, staff or clients."
+    },
+    {
+      "file": "areas-we-serve.jpg",
+      "note": "Illustrative photo (Higgsfield GPT Image 2.6). Used only on /areas-we-serve/ hero. View through a window across the Truckee Meadows: mid-rise buildings, parking lot, street trees, dry hills. Not the real office, owner, staff or clients."
+    },
+    {
+      "file": "area-reno.jpg",
+      "note": "Illustrative photo (Higgsfield GPT Image 2.6). Used only on /areas-we-serve/reno-nv/ hero. Quiet commercial street with mid-rise buildings, street trees and parked cars; dry hills at the end of the block. Not the real office, owner, staff or clients."
+    },
+    {
+      "file": "area-carson-city.jpg",
+      "note": "Illustrative photo (Higgsfield GPT Image 2.6). Used only on /areas-we-serve/carson-city-nv/ hero. Tree-lined civic street of brick and light stone buildings; dry hills in the distance. No lettering. Not the real office, owner, staff or clients."
+    },
+    {
+      "file": "area-truckee.jpg",
+      "note": "Illustrative photo (Higgsfield GPT Image 2.6). Used only on /areas-we-serve/truckee-ca/ hero. Mountain town street with wooden storefronts and tall pines in summer light; no snow, no shop names. Not the real office, owner, staff or clients."
+    },
+    {
+      "file": "contact-desk.jpg",
+      "note": "Illustrative photo (Higgsfield GPT Image 2.6). Used only on /contact/ hero. Phone face down beside a yellow legal pad, pencil and coffee mug on a wooden desk by a window. Not the real office, owner, staff or clients."
+    },
+    {
+      "file": "recommendations-letters.jpg",
+      "note": "Illustrative photo (Higgsfield GPT Image 2.6). Used only on /recommendations/ hero. 2 closed cream envelopes, plain folder and fountain pen on a worn leather blotter; desert city outside. Not the real office, owner, staff or clients."
+    },
+    {
+      "file": "faq-notebook.jpg",
+      "note": "Illustrative photo (Higgsfield GPT Image 2.6). Used only on /faq/ hero. Open spiral notebook with unreadable scribbles, pencil and paper coffee cup by a window onto dry hills. Not the real office, owner, staff or clients."
     },
     {
       "file": "logo-wilkerson-consulting.png",

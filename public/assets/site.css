@@ -46,7 +46,7 @@
 
   /* Type scale. Phone value first, desktop value last. */
   --fs-h1: clamp(2.5rem, 1.35rem + 4.8vw, 4.25rem);       /* home headline, 40 to 68, weight 700, line 1.05 */
-  --fs-h1-page: clamp(2.125rem, 1.6rem + 2.4vw, 3.375rem); /* inner page headings, 34 to 54, weight 700, line 1.08 */
+  --fs-h1-page: clamp(1.875rem, 1.2rem + 2.8vw, 3.375rem); /* inner page headings, 30 to 54, weight 700, line 1.08 */
   --fs-h2: clamp(1.875rem, 1.5rem + 1.5vw, 2.625rem);     /* 30 to 42, weight 600, line 1.15 */
   --fs-h3: clamp(1.25rem, 1.17rem + .35vw, 1.5rem);       /* 20 to 24, weight 600, line 1.3 */
   --fs-lead: clamp(1.125rem, 1.06rem + .3vw, 1.3125rem);  /* 18 to 21, line 1.6 */
@@ -367,75 +367,118 @@ html.intro-skip .intro { animation: intro-out .25s ease forwards !important; }
 @keyframes intro-out { to { opacity: 0; visibility: hidden; pointer-events: none; } }
 @media (prefers-reduced-motion: reduce) { .intro, html.intro-on .intro { display: none !important; } }
 
-/* Heroes */
-.hero { padding: 56px 0 64px; }
-@media (min-width: 960px) { .hero { padding: 88px 0 96px; } }
+/* Heroes. One layout for every page.
+   Phone: eyebrow, headline, short lede, photo, then the buttons fill the first screen, above a band
+   kept clear for the chat widget's open welcome bubble and the round buttons. The rest of the
+   lede, the credentials and anything else follow below that band.
+   Desktop: copy on the left, photo or side card on the right, top-aligned. The hero reaches the
+   bottom of the first screen and the photo stops short of it, so the bottom-right corner, where
+   the chat bubble opens, holds nothing but hero background. */
+:root { --hero-top: 20px; --chat-zone: 210px; }
+@media (min-width: 960px) { :root { --hero-top: 64px; --chat-zone: 190px; } }
+.hero { padding: var(--hero-top) 0 0; }
 .hero--navy { background: var(--navy); color: var(--on-navy); }
 .hero--navy h1 { color: var(--white); }
 .hero--cream { background: var(--cream); }
-.hero-grid { display: grid; gap: 40px; align-items: center; }
-@media (min-width: 960px) {
-  .hero-grid { grid-template-columns: minmax(0, 1.08fr) minmax(0, .92fr); gap: 64px; }
+.hero-layout { display: grid; grid-template-columns: minmax(0, 1fr); }
+.hero-main {
+  display: flex; flex-direction: column;
+  min-height: calc(100vh - var(--header-h) - var(--hero-top));
+  min-height: calc(100svh - var(--header-h) - var(--hero-top));
+  padding-bottom: var(--chat-zone);
 }
-.hero .answer { font-size: var(--fs-lead); line-height: 1.6; margin-top: 18px; }
-.hero--navy .answer { color: var(--on-navy); }
-.hero-proof { list-style: none; padding: 0; margin: 28px 0 0; display: flex; flex-wrap: wrap; gap: 8px 22px; font-size: var(--fs-small); color: var(--muted); }
+.hero-main > .eyebrow { align-self: flex-start; margin-bottom: 14px; }
+.hero-main > h1 { margin: 0; }
+.hero .answer { font-size: var(--fs-lead); line-height: 1.6; margin: 16px 0 0; }
+.hero .answer-more { font-size: var(--fs-lead); line-height: 1.6; margin: 0; }
+.hero--navy .answer, .hero--navy .answer-more { color: var(--on-navy); }
+.hero-main > .updated { margin-top: 14px; }
+.hero-media { position: relative; margin-top: 20px; }
+.hero-media img { width: 100%; aspect-ratio: 2 / 1; object-fit: cover; border-radius: var(--radius); box-shadow: var(--shadow-lift); }
+.hero-cta { margin-top: 20px; }
+.hero-rest { padding-bottom: 40px; }
+.hero-side { padding-bottom: 48px; }
+.hero-extra { padding-bottom: 56px; }
+.hero-proof { list-style: none; padding: 0; margin: 24px 0 0; display: flex; flex-wrap: wrap; gap: 8px 22px; font-size: var(--fs-small); color: var(--muted); }
 .hero--navy .hero-proof { color: var(--on-navy-muted); }
 .hero-proof li { display: inline-flex; align-items: center; gap: 8px; }
 .hero-proof svg { width: 18px; height: 18px; color: var(--bronze); }
-.hero-media { position: relative; }
-.hero-media img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--radius); box-shadow: var(--shadow-lift); }
-@media (min-width: 960px) { .hero-media img { aspect-ratio: 5 / 4; } }
-.hero-media--wide img { aspect-ratio: 16 / 10; }
-/* Service page heroes: on a desktop the photo fills the height of the text beside it, so neither
-   column leaves a gap. */
-@media (min-width: 960px) {
-  .hero-grid > .hero-media--wide { align-self: stretch; }
-  .hero-media--wide img { height: 100%; min-height: 340px; aspect-ratio: auto; }
+/* A hero with nothing beside the copy sits in the middle of its first screen */
+.hero-layout--solo .hero-main { justify-content: center; }
+@media (max-width: 959px) {
+  /* Tighter gaps on a phone, so long headlines still leave the buttons above the chat band */
+  :root { --hero-top: 16px; }
+  .hero-main > .eyebrow { margin-bottom: 10px; }
+  .hero .answer { margin-top: 12px; }
+  .hero-media { margin-top: 16px; }
+  .hero-media img { aspect-ratio: 2.2 / 1; }
+  .hero-cta { margin-top: 16px; }
+  /* Both hero buttons share one row, so they clear the band kept for the chat bubble */
+  .hero-cta { display: flex; gap: 10px; max-width: none; }
+  .hero-cta .btn { flex: 1 1 auto; width: auto; min-height: 50px; padding: 12px 14px; font-size: .9375rem; gap: 8px; }
 }
-/* Home hero. One grid, so a phone reads eyebrow, headline, short lede, photo, buttons, then the
-   rest, while a desktop keeps the copy on the left and the photo on the right, top-aligned. */
-.hero--home { padding: 36px 0 56px; }
-.hero-home { display: grid; grid-template-columns: minmax(0, 1fr); }
-.hero-home > .eyebrow { margin-bottom: 18px; justify-self: start; }
-.hero-home > h1 { margin: 0; }
-.hero .hero-home__lede { margin-top: 18px; margin-bottom: 0; }
-.hero-home__media { margin-top: 26px; }
-.hero-home__media img { aspect-ratio: 3 / 2; }
-.hero-home__cta { margin-top: 24px; }
-.hero-home__more { margin: 24px 0 0; color: var(--on-navy); }
-.hero-home__proof { margin-top: 20px; }
+@media (max-width: 379px) { .hero-cta .btn-num { display: none; } }
 @media (min-width: 960px) {
-  .hero--home { padding: 64px 0 80px; }
-  .hero-home {
-    grid-template-columns: minmax(0, 1.12fr) minmax(0, .88fr);
+  .hero-layout {
+    grid-template-columns: minmax(0, 1.08fr) minmax(0, .92fr); column-gap: 64px;
     grid-template-areas: "eyebrow media" "title media" "lede media" "more media" "cta media" "proof media" ". media";
     grid-template-rows: repeat(6, auto) 1fr;
-    column-gap: 64px;
+    min-height: min(calc(100vh - var(--header-h) - var(--hero-top)), 900px);
+    padding-bottom: 64px;
   }
-  .hero-home > .eyebrow { grid-area: eyebrow; }
-  .hero-home > h1 { grid-area: title; }
-  .hero .hero-home__lede { grid-area: lede; margin-top: 22px; }
-  .hero-home__more { grid-area: more; margin-top: 12px; font-size: var(--fs-lead); line-height: 1.6; }
-  .hero-home__cta { grid-area: cta; margin-top: 32px; }
-  .hero-home__proof { grid-area: proof; margin-top: 26px; }
-  .hero-home__media { grid-area: media; margin-top: 6px; align-self: start; }
-  .hero-home__media img { aspect-ratio: 10 / 9; max-height: max(300px, calc(100vh - 400px)); }
+  .hero-main, .hero-rest { display: contents; }
+  .hero-main > .eyebrow { grid-area: eyebrow; justify-self: start; }
+  .hero-main > h1 { grid-area: title; }
+  .hero .hero-lede { grid-area: lede; margin-top: 20px; }
+  .hero-rest > .answer-more { grid-area: more; margin-top: 12px; }
+  .hero-cta { grid-area: cta; margin-top: 32px; }
+  .hero-rest > .hero-proof { grid-area: proof; margin-top: 26px; }
+  .hero-media, .hero-side { grid-area: media; margin-top: 4px; align-self: start; padding-bottom: 0; }
+  .hero-media img { aspect-ratio: 5 / 4; max-height: max(280px, calc(100vh - var(--header-h) - var(--hero-top) - var(--chat-zone) - 40px)); }
+  .hero-layout--solo { display: block; padding-bottom: 0; }
+  .hero-layout--solo .hero-main { display: flex; }
+  .hero-extra { padding-bottom: 88px; }
 }
-/* Keep the 2-line headline on 2 lines where its column is narrow */
-@media (min-width: 960px) and (max-width: 1199px) { .hero-home > h1 { font-size: 3.375rem; } }
-@media (max-width: 370px) { .hero-home > h1 { font-size: 2.25rem; } }
-/* On a phone the call and contact buttons sit straight under the heading, so both are on screen
-   before anybody scrolls. The direct answer stays right after the h1 in the HTML. */
-@media (max-width: 599px) {
-  .hero { padding: 28px 0 48px; }
-  .hero-grid > div:first-child { display: flex; flex-direction: column; }
-  .hero-grid > div:first-child > .eyebrow { order: 1; align-self: flex-start; }
-  .hero-grid > div:first-child > h1 { order: 2; }
-  .hero-grid > div:first-child > .btn-row { order: 3; margin-top: 6px; }
-  .hero-grid > div:first-child > .answer { order: 4; margin-top: 22px; }
-  .hero-grid > div:first-child > .hero-proof { order: 5; }
+/* Home: the 2-line headline stays on 2 lines where its column is narrow */
+.hero--home .hero-media img { aspect-ratio: 2.2 / 1; }
+@media (min-width: 960px) { .hero--home .hero-media img { aspect-ratio: 10 / 9; } }
+@media (min-width: 960px) and (max-width: 1199px) { .hero--home h1 { font-size: 3.375rem; } }
+@media (max-width: 370px) { .hero--home h1 { font-size: 2.25rem; } }
+
+/* Service icon cards (home and the services page): icon and label share a row above the title */
+.service-card__head { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
+.service-card__head .card-icon { margin-bottom: 0; }
+.service-card__head .card-label { margin: 0; }
+.service-card h2 { font-size: clamp(1.375rem, 1.25rem + .5vw, 1.625rem); margin-bottom: 10px; }
+/* The short steps under the What to Expect hero */
+.steps--compact li { padding: 20px 22px; }
+.steps--compact li::before { width: 34px; height: 34px; font-size: 1rem; margin-bottom: 12px; }
+.steps--compact h3 { font-size: 1.0625rem; margin-bottom: 4px; }
+.steps--compact p { font-size: .9375rem; }
+@media (max-width: 719px) { .steps--compact { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; } }
+
+/* Rows that sit under a hero: link cards, a quote, short steps, contact cards */
+.link-cards.link-cards--4 { display: grid; gap: 14px; }
+@media (min-width: 720px) {
+  .link-cards.link-cards--4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .link-cards--5 > :last-child:nth-child(odd) { grid-column: 1 / -1; }
 }
+@media (min-width: 1024px) { .link-cards--5 > :last-child:nth-child(odd) { grid-column: auto; } }
+@media (min-width: 1024px) {
+  .link-cards.link-cards--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .link-cards.link-cards--5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+}
+.hero-extra .link-card { background: var(--white); }
+.contact-cards { display: grid; gap: 14px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (min-width: 1024px) { .contact-cards { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; } }
+.contact-cards .card { padding: 20px; }
+.contact-cards .card h2 { font-size: var(--fs-h3); margin-bottom: 4px; }
+.contact-cards .card p { margin: 0; font-size: 1rem; }
+.contact-cards .card-icon { margin-bottom: 14px; width: 44px; height: 44px; }
+.contact-cards .card-icon svg { width: 22px; height: 22px; }
+/* The email address only ever breaks before the @ sign */
+.email-break { overflow-wrap: normal; word-break: normal; }
+@media (min-width: 1024px) { .contact-cards .card { padding: 24px; } }
 
 /* Media */
 .media img { width: 100%; border-radius: var(--radius); aspect-ratio: 3 / 2; object-fit: cover; box-shadow: var(--shadow); }

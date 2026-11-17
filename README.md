@@ -38,8 +38,17 @@ Strain Systems accounting and consulting site (not a law firm). `VERIFY.md` is t
 - **No fees page (client revision, Nov 17, 2026):** the client never asked for pricing, so the Fees
   page and every mention of fees were removed. `/fees` and `/fees/` redirect (308) to `/contact/` in
   `vercel.json`. Add a fees page only if the client asks and supplies terms.
-- **Photos (client revision, Nov 17, 2026):** the 5 photos were regenerated with Higgsfield to look
-  natural and northern Nevada. See `public/images/README.md`.
+- **Photos:** 15 illustrative photos from Higgsfield, **each used on one page only** (home, the
+  services page, the 4 service pages, the 4 area pages, About, What to expect, Recommendations,
+  FAQ and Contact). The home page and services page use icon cards, not photos. Run
+  `node tools/image-dupes.mjs public` before every ship; it must print
+  `OK: every photo is used on one page only`. See `public/images/README.md`.
+- **Hero layout and the chat bubble:** every hero fills the first screen. On phones the order is
+  eyebrow, headline, short lede, photo, buttons, with a band of about 210px kept clear at the bottom
+  for the chat widget's open welcome bubble and the round buttons; the rest of the lede and any
+  side card follow below. On desktop the photo stops about 190px above the bottom of the screen, so
+  the bottom-right corner where the bubble opens holds only hero background. Long headlines are the
+  tight spot: after changing a hero, check that both buttons end above the bottom 200px at 390x844.
 - **Opening animation:** plays once per browser tab session (sessionStorage), can be skipped by any
   click, tap or key, hides itself by CSS after about 2.3s, and never runs with reduced motion or
   without JavaScript.

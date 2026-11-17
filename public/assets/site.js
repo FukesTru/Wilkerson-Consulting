@@ -82,8 +82,9 @@
     var wrap = document.querySelector('.form-wrap');
     if (!wrap) return false;
     var headerH = header ? header.offsetHeight : 0;
-    var dockH = window.innerWidth < 768 ? 92 : 0;
-    var avail = window.innerHeight - headerH - dockH;
+    /* Keep the form clear of the corner where the chat widget's welcome bubble opens */
+    var chatZone = window.innerWidth < 768 ? 150 : 190;
+    var avail = window.innerHeight - headerH - chatZone;
     var rect = wrap.getBoundingClientRect();
     var top = window.scrollY + rect.top - headerH;
     if (rect.height < avail) top -= (avail - rect.height) / 2;
