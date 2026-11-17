@@ -31,12 +31,19 @@ Strain Systems accounting and consulting site (not a law firm). `VERIFY.md` is t
   and that the chat bubble sits level with the two round phone buttons. Those are 56px, 20px from the
   bottom (`--fab` and `--fab-bottom` in `site.css`); adjust if the bubble differs.
 - **Small phones:** the GHL form is 543px tall by its own setting. On a short screen that is more
-  than the space between the header and the round buttons, so Contact us lands with the top of the
-  form just under the header.
+  than the space below the header, so Contact us lands with the top of the form just under the header.
+- **Round phone buttons:** the call and contact buttons (`.dock`) hide while the contact section or a
+  hero's own call and contact buttons are on screen (`dock-off` in `site.js`), so they never sit on top
+  of them. The chat widget itself is untouched.
+- **No fees page (client revision, Nov 17, 2026):** the client never asked for pricing, so the Fees
+  page and every mention of fees were removed. `/fees` and `/fees/` redirect (308) to `/contact/` in
+  `vercel.json`. Add a fees page only if the client asks and supplies terms.
+- **Photos (client revision, Nov 17, 2026):** the 5 photos were regenerated with Higgsfield to look
+  natural and northern Nevada. See `public/images/README.md`.
 - **Opening animation:** plays once per browser tab session (sessionStorage), can be skipped by any
   click, tap or key, hides itself by CSS after about 2.3s, and never runs with reduced motion or
   without JavaScript.
-- **Editing:** pages were generated once and are now plain HTML. Edit them directly. The header and
+- **Editing:** pages are plain HTML. Edit them directly. The header and
   footer blocks must stay identical on every page (`node tools/check.mjs` enforces it).
 - **Private material not in this repo:** the onboarding CSV, the client's emails and letters, and the
   add-ons file (it holds the home street address). Keep them out; this repo is public.

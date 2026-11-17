@@ -13,13 +13,10 @@ Nothing on the site was made up. Where we did not have a fact, we wrote the page
 1. **Business address.** Your form gave a street with no city or ZIP, and public records show it as a home. For now the site shows only "Reno, Nevada" and no street address. Do you want an address shown (an office, a mailbox or a virtual office)? If so, please send it exactly as it should appear. A real business address also helps when you set up a Google Business Profile.
 2. **Google Business Profile.** You do not have one yet. We strongly recommend setting one up, since it is how most people find a local firm on Google and Google Maps. Once it exists, send us the link. The site currently has no "leave us a review" button, because there is nowhere to send reviews yet.
 3. **Hours.** The site says "Call or text any time to set up a consultation." Do you want set office hours shown instead?
-4. **Fees.** You did not give any fee terms, so the Fees page says fees depend on the work and are discussed up front, before any work starts. Please tell us:
-   - how you bill (hourly, a set fee per project, a monthly fee, or a mix);
-   - whether the first conversation is free;
-   - whether you want any starting prices shown.
+4. **Fees and pricing.** You did not ask for pricing, so the site has no fees page and shows no prices or fee terms anywhere. An earlier draft had a Fees page; it has been removed, and the old address now forwards to the Contact page. We will only add a fees page if you ask for one and send your terms (how you bill, whether the first conversation is free, and any prices you want shown).
 5. **Logo.** You asked for one to be designed. The site uses a simple wordmark, "Wilkerson Consulting", with a "W" mark in navy and bronze. Please approve it or tell us what you would like changed.
 6. **Colours and fonts.** You did not give any, so we chose them: navy `#14213D`, bronze `#B8875A`, cream `#F7F3EC` and sage green `#3E5C58`, with the fonts Source Serif 4 (headings) and Inter (text). Please approve them or tell us what you would prefer.
-7. **A photo of you.** We have no photos of you, your office or your work. The site uses AI-generated illustrations (a desk by a window, a job trailer desk, a machine shop office, ledgers, and a pair of hands comparing spreadsheets). None of them claims to show you, your office or your clients. A professional headshot would make the home page and the About page much stronger. Please send one if you have it, plus any other photos you are happy to use.
+7. **A photo of you.** We have no photos of you, your office or your work. The site uses AI-generated illustrations of desks with no people in them: a desk by a window looking over a high desert city, a job trailer desk, a machine shop office, a desk with plain ledgers, and stacks of spreadsheet printouts. They were redone to look more natural and more like northern Nevada. None of them claims to show you, your office or your clients. A professional headshot would make the home page and the About page much stronger. Please send one if you have it, plus any other photos you are happy to use.
 8. **Social profiles.** You have none yet. If you set up a LinkedIn profile or a business page, send us the link and we will add it to the footer.
 9. **Domain name.** You asked for wilkersonconsulting.com. Your form wrote it "Wilkersonconsulting.com". Web addresses ignore capital letters, so we used www.wilkersonconsulting.com. Right now that address shows a "this domain is for sale" page, which usually means it is **not** registered to you. Please confirm whether you own it. If not, it has to be bought (or another name chosen) before the site can go live. Every page is already set up for www.wilkersonconsulting.com.
 10. **Email.** The site shows RayFL1654@gmail.com on every page. Please confirm you are happy for it to be public. Once the domain is sorted, an address such as ray@wilkersonconsulting.com would look more established, and we can switch it.
@@ -48,7 +45,7 @@ Nothing on the site was made up. Where we did not have a fact, we wrote the page
 - **How you work.** These statements appear across the site. Please confirm each one matches how you actually work:
   - When someone calls or texts the number, they reach you.
   - You get back to people who send the form.
-  - Fees are discussed up front, and work starts only once the client agrees.
+  - The scope is explained up front, and work starts only once the client agrees.
   - You start from the client's existing software and records.
   - You meet in person around Reno and Carson City, and by phone or video for Truckee and Lake Tahoe (in person by arrangement).
   - Monthly work (such as WIP schedules or trust reconciliations) follows the same schedule each month.
@@ -59,7 +56,7 @@ Nothing on the site was made up. Where we did not have a fact, we wrote the page
 
 - Your story in short: you merged your public accounting firm with a larger regional firm in 1994; in 1998 you started a family commercial cleaning business and over 20 years grew it into a decorative and polished concrete installation, restoration and maintenance company with **sales of $2.5 to $3.0 million a year**; then you returned to accounting as a contract and Fractional CFO and controller. Please confirm you are happy for the sales figure to be public.
 - "At W. W. Nash & Sons, Inc. in Richmond, Virginia, Ray helped create and refine the company's WIP process and set up audit procedures and internal processes." This comes from Mr. Hoover's letter. Please confirm you are happy to name the company.
-- The lead service in the main heading is construction accounting and WIP schedules. Tell us if you would rather lead with a different service.
+- The main heading now reads "Work in progress. Books that keep up." It plays on your WIP (work in progress) schedules and makes no claim. Tell us if you would like different wording.
 
 ### About page
 
@@ -67,7 +64,7 @@ Nothing on the site was made up. Where we did not have a fact, we wrote the page
 - "In 1998 Ray, his wife, his son and his son's wife started a commercial cleaning business ... His son and daughter-in-law then took the business over." Please confirm you are happy for your family to be mentioned this way.
 - "For about the last 2 years ... Fractional CFO and controller for W. W. Nash & Sons, Inc. and affiliated companies in Richmond, Virginia." Taken from Mr. Favaro's letter.
 - The timeline shows "Then: back to accounting" with no year. Send a year if you want one shown.
-- "3 things stay the same on every piece of work": clients deal with you, they know the fee first, and you explain findings in plain words.
+- "3 things stay the same on every piece of work": clients deal with you, they know the scope first, and you explain findings in plain words.
 
 ### Recommendations page
 
@@ -92,13 +89,9 @@ Nothing on the site was made up. Where we did not have a fact, we wrote the page
 - **Truckee page.** Mentions Nevada County, California; California's income tax and franchise tax; the Contractors State License Board; California trust account rules; and winter chain controls on Interstate 80.
 - Would you like any other towns added, such as Sparks, Minden, Gardnerville or Fernley? We only listed the ones on your form.
 
-### Fees page
-
-- Everything on this page is general, because no fee terms were given (see Part A, item 4). It lists the things that drive cost and splits work into one-time projects and monthly work.
-
 ### What to expect page
 
-- The 5 steps: first contact, a first conversation, a look at the records when needed, scope and fee agreed, then the work with updates. Please confirm this is how you start with new clients.
+- The 5 steps: first contact, a first conversation, a look at the records when needed, scope agreed, then the work with updates. Please confirm this is how you start with new clients.
 
 ### Firm information page
 

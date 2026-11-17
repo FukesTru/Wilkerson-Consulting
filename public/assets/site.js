@@ -103,6 +103,22 @@
     window.addEventListener('load', function () { window.setTimeout(scrollToForm, 60); });
   }
 
+  /* Phones: the round call and contact buttons step aside while the contact form, or a hero's own
+     call and contact buttons, are on screen, so they never sit on top of them. */
+  var dockTargets = Array.prototype.slice.call(document.querySelectorAll('.contact-section, .hero .btn-row'));
+  if (document.querySelector('.dock') && dockTargets.length && 'IntersectionObserver' in window) {
+    var onScreen = [];
+    var dockIo = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        var i = onScreen.indexOf(en.target);
+        if (en.isIntersecting && i < 0) onScreen.push(en.target);
+        if (!en.isIntersecting && i > -1) onScreen.splice(i, 1);
+      });
+      doc.classList.toggle('dock-off', onScreen.length > 0);
+    }, { threshold: 0 });
+    dockTargets.forEach(function (el) { dockIo.observe(el); });
+  }
+
   /* Sections settle into place as they come into view */
   var items = Array.prototype.slice.call(document.querySelectorAll('.reveal, .reveal-group'));
   if (!reduced && 'IntersectionObserver' in window) {
