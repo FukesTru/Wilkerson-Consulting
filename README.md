@@ -38,9 +38,9 @@ Strain Systems accounting and consulting site (not a law firm). `VERIFY.md` is t
 - **No fees page (client revision, Nov 17, 2026):** the client never asked for pricing, so the Fees
   page and every mention of fees were removed. `/fees` and `/fees/` redirect (308) to `/contact/` in
   `vercel.json`. Add a fees page only if the client asks and supplies terms.
-- **Photos:** 15 illustrative photos from Higgsfield, **each used on one page only** (home, the
-  services page, the 4 service pages, the 4 area pages, About, What to expect, Recommendations,
-  FAQ and Contact). The home page and services page use icon cards, not photos. Run
+- **Photos:** 16 illustrative photos from Higgsfield, **each used on one page only** (home, the
+  services page, the 4 service pages, the 4 area pages, Remote services, About, What to expect,
+  Testimonials, FAQ and Contact). The home page and services page use icon cards, not photos. Run
   `node tools/image-dupes.mjs public` before every ship; it must print
   `OK: every photo is used on one page only`. See `public/images/README.md`.
 - **Hero layout and the chat bubble:** every hero fills the first screen. On phones the order is
@@ -49,6 +49,15 @@ Strain Systems accounting and consulting site (not a law firm). `VERIFY.md` is t
   side card follow below. On desktop the photo stops about 190px above the bottom of the screen, so
   the bottom-right corner where the bubble opens holds only hero background. Long headlines are the
   tight spot: after changing a hero, check that both buttons end above the bottom 200px at 390x844.
+- **Testimonials (Nov 19, 2026):** `/recommendations/` became `/testimonials/`. `vercel.json`
+  redirects `/recommendations` and `/recommendations/` there (301). The old file is kept as a
+  noindex stub with a canonical and a meta refresh to `/testimonials/`, and carries no photo, so
+  `image-dupes` still passes.
+- **Form height:** the GoHighLevel form is getting 2 consent checkboxes, so `.form-wrap iframe`
+  has a height floor per width (840px desktop, 780px tablet, 860px from 480 to 767px, 960px on
+  phones, 1020px under 360px). On Nov 19, 2026 the live form did not show the checkboxes yet;
+  once it does, check on a phone that nothing scrolls inside the form and trim the floors if
+  there is a large gap under the Send button.
 - **Opening animation:** plays once per browser tab session (sessionStorage), can be skipped by any
   click, tap or key, hides itself by CSS after about 2.3s, and never runs with reduced motion or
   without JavaScript.

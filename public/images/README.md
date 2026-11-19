@@ -23,7 +23,8 @@ Web files: each `<name>.jpg` is 1920 x 1086 and under 400 KB, with `<name>-1200.
 | `area-carson-city.jpg` | `/areas-we-serve/carson-city-nv/` (hero) | A quiet tree-lined civic street of brick and light-stone buildings under a wide sky, with dry hills in the distance. No flags or lettering. |
 | `area-truckee.jpg` | `/areas-we-serve/truckee-ca/` (hero) | A small Sierra mountain-town street with wooden storefronts and tall pines in summer light, no snow and no shop names. |
 | `contact-desk.jpg` | `/contact/` (hero) | A phone lying face down beside a yellow legal pad with faint unreadable pencil lines, a pencil and a mug of coffee, by a window. |
-| `recommendations-letters.jpg` | `/recommendations/` (hero) | 2 closed cream envelopes, a plain folder and a fountain pen on a worn leather blotter, with a high desert city beyond the window. |
+| `recommendations-letters.jpg` | `/testimonials/` (hero; the old `/recommendations/` address redirects there) | 2 closed cream envelopes, a plain folder and a fountain pen on a worn leather blotter, with a high desert city beyond the window. |
+| `remote-services.jpg` | `/remote-services/` (hero) | A phone lying face down, a short stack of plain paper folders and a closed laptop on a worn wooden desk by a window, with sagebrush hills outside. No screens showing, no text. |
 | `faq-notebook.jpg` | `/faq/` (hero) | An open spiral notebook with soft, unreadable pencil scribbles, a pencil and a paper cup of coffee, by a window onto dry hills. |
 
 Firm information, Privacy, Terms and the 404 page have no photos.

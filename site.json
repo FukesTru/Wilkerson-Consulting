@@ -104,11 +104,15 @@
     },
     {
       "file": "recommendations-letters.jpg",
-      "note": "Illustrative photo (Higgsfield GPT Image 2.6). Used only on /recommendations/ hero. 2 closed cream envelopes, plain folder and fountain pen on a worn leather blotter; desert city outside. Not the real office, owner, staff or clients."
+      "note": "Illustrative photo (Higgsfield GPT Image 2.6). Used only on /testimonials/ hero (the old /recommendations/ address redirects there). 2 closed cream envelopes, plain folder and fountain pen on a worn leather blotter; desert city outside. Not the real office, owner, staff or clients."
     },
     {
       "file": "faq-notebook.jpg",
       "note": "Illustrative photo (Higgsfield GPT Image 2.6). Used only on /faq/ hero. Open spiral notebook with unreadable scribbles, pencil and paper coffee cup by a window onto dry hills. Not the real office, owner, staff or clients."
+    },
+    {
+      "file": "remote-services.jpg",
+      "note": "Illustrative photo (Higgsfield GPT Image 2.6). Used only on /remote-services/ hero. Phone face down, plain paper folders and a closed laptop on a wooden desk by a window onto sagebrush hills. Not the real office, owner, staff or clients."
     },
     {
       "file": "logo-wilkerson-consulting.png",

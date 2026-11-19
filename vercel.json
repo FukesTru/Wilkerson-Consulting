@@ -15,6 +15,16 @@
       "source": "/fees/",
       "destination": "/contact/",
       "permanent": true
+    },
+    {
+      "source": "/recommendations",
+      "destination": "/testimonials/",
+      "statusCode": 301
+    },
+    {
+      "source": "/recommendations/",
+      "destination": "/testimonials/",
+      "statusCode": 301
     }
   ],
   "headers": [

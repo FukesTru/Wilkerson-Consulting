@@ -56,7 +56,7 @@ Nothing on the site was made up. Where we did not have a fact, we wrote the page
 
 - Your story in short: you merged your public accounting firm with a larger regional firm in 1994; in 1998 you started a family commercial cleaning business and over 20 years grew it into a decorative and polished concrete installation, restoration and maintenance company with **sales of $2.5 to $3.0 million a year**; then you returned to accounting as a contract and Fractional CFO and controller. Please confirm you are happy for the sales figure to be public.
 - "At W. W. Nash & Sons, Inc. in Richmond, Virginia, Ray helped create and refine the company's WIP process and set up audit procedures and internal processes." This comes from Mr. Hoover's letter. Please confirm you are happy to name the company.
-- The main heading now reads "Work in progress. Books that keep up." It plays on your WIP (work in progress) schedules and makes no claim. Tell us if you would like different wording.
+- The main heading now reads "Every job costed. Every dollar accounted for." Tell us if you would like different wording.
 
 ### About page
 
@@ -66,11 +66,14 @@ Nothing on the site was made up. Where we did not have a fact, we wrote the page
 - The timeline shows "Then: back to accounting" with no year. Send a year if you want one shown.
 - "3 things stay the same on every piece of work": clients deal with you, they know the scope first, and you explain findings in plain words.
 
-### Recommendations page
+### Testimonials page
 
-- **Permission.** The page quotes Adam Hoover (Vice President, W.W. Nash and Sons Inc., letter dated June 19, 2025) and Jacob D. Favaro, CPA, CFP® (Partner, Brown Edwards, letter dated July 30, 2026), with their names, titles and companies. Please confirm both have agreed to appear on a public website. Some CPA firms have rules about partners giving public recommendations, so please check with Mr. Favaro that Brown Edwards is comfortable with it.
+The Recommendations page is now called Testimonials (www.wilkersonconsulting.com/testimonials/). The old address forwards there.
+
+- **Permission.** The page quotes Adam Hoover (Vice President, W.W. Nash and Sons Inc., letter dated June 19, 2025) and Jacob D. Favaro, CPA, CFP® (Partner in-charge of Tax Services, Richmond, VA office, Brown Edwards, letter dated July 30, 2026), with their names, titles and companies. Each letter is shown with the writer's initials in a circle; no logos, signatures or photos of them. Please confirm both have agreed to appear on a public website. Some CPA firms have rules about partners giving public recommendations, so please check with Mr. Favaro that Brown Edwards is comfortable with it.
 - The company name is spelled as each letter spells it: "W.W. Nash and Sons Inc." (Mr. Hoover) and "W. W. Nash & Sons, Inc." (Mr. Favaro).
-- Only the parts of the letters about your work are quoted. Nothing addressed to a licensing board is quoted.
+- Only the parts of the letters about your work are quoted, word for word: 8 sentences from Mr. Hoover's letter and 5 from Mr. Favaro's, including his line that you are a member of the Construction Financial Managers Association and have attended several Brown Edwards webinar classes. No phone numbers, email or street addresses from the letters are shown.
+- The excerpts are shown in an order that reads well, which may not be the order of the letter. Tell us if you prefer the letter's order.
 
 ### Services pages
 
@@ -97,9 +100,16 @@ Nothing on the site was made up. Where we did not have a fact, we wrote the page
 
 - A plain list of facts about the firm for search engines and AI assistants: name, legal name, owner, credential, membership, services, areas, phone, email and hours. Please read it once for accuracy.
 
+### Remote services page
+
+- New page at www.wilkersonconsulting.com/remote-services/ for businesses outside the Reno area. It says you work by phone and video, that much of the work happens through shared files, that you meet in person around Reno and Carson City by arrangement, and that you keep clients posted with regular check-ins by phone or video. Please confirm each of these, and tell us if there is anywhere you would rather not take on remote work.
+- It does not name any software, does not say which states you can work in, and does not mention licensing in other states.
+
 ### Contact page
 
 - No street address is shown (see Part A, item 1). Meetings are "set up by arrangement".
+- **Website form.** The form itself (set up in GoHighLevel) has the heading "GET A FREE CONSULTATION". The website does not say the first conversation is free (see Part A, item 4). Please confirm a free consultation is right, or change the form heading.
+- **Consent checkboxes.** On November 19, 2026 the live form still showed no consent checkboxes. The website leaves room for 2 checkboxes under the message box. Once they are published, please check on a phone that the whole form and the Send button show without scrolling inside the form.
 
 ### Privacy policy and terms of use
 
