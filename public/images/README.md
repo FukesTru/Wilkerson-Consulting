@@ -4,13 +4,14 @@ Illustrative photographs, generated with Higgsfield GPT Image 2.6 (quality high,
 
 **Rule: each photo is used on one page only** (in a hero, a section, a card or a background), and never twice on the same page. Logos, favicons, the touch icon and the social sharing image are exempt. Check it with `node tools/image-dupes.mjs public`, which must print `OK: every photo is used on one page only`.
 
-Each prompt asked for a candid documentary look in a Reno or northern Nevada setting, with no people, faces or hands, no screens showing anything, no charts, no readable text, numbers, logos or signs, no snow, and nothing glossy or CGI. Every result was checked at full size before use. Regenerated: the home hero (the first version had palm trees) and the FAQ notebook (the first version had fake handwriting that could almost be read).
+Each prompt asked for a candid documentary look in a Reno or northern Nevada setting, with no people, faces or hands, no screens showing anything, no charts, no readable text, numbers, logos or signs, no snow, and nothing glossy or CGI. Every result was checked at full size before use. Regenerated: the first home hero (the first version had palm trees) and the FAQ notebook (the first version had fake handwriting that could almost be read).
 
 Web files: each `<name>.jpg` is 1920 x 1086 and under 400 KB, with `<name>-1200.jpg` and `<name>-800.jpg` copies that the pages load through `srcset`. The 2688 x 1520 PNG originals are kept by the operator, not in this repo.
 
 | File | Only page | What it shows |
 | --- | --- | --- |
-| `hero-office-desk.jpg` | `/` (home hero) | A walnut desk by a large window: a closed laptop, a loose stack of plain manila folders, a coffee cup on a saucer, a plant and a leather chair. Outside, an ordinary high-desert city with dry tan foothills. |
+| `hero-reno-window.jpg` | `/` (home hero, revision 7) | The view from a quiet upper-floor office window over an ordinary Reno neighbourhood: street trees, low and mid-rise buildings and dry tan hills under a pale sky. The left third is a plain dim wall, so the heading can sit over it; a small potted plant on the sill at the far right. No screens, people or readable signs. |
+| `hero-office-desk.jpg` | Not used on any page since revision 7 (it was the home hero). Kept in the repo. | A walnut desk by a large window: a closed laptop, a loose stack of plain manila folders, a coffee cup on a saucer, a plant and a leather chair. Outside, an ordinary high-desert city with dry tan foothills. |
 | `construction-accounting.jpg` | `/services/construction-accounting/` (hero) | A worn job-trailer desk: a scuffed hard hat, a plain blueprint roll, an architect's scale, a blank calculator, folders, a closed laptop and a mug. Outside, a steel frame on a desert site. |
 | `manufacturing-cost-accounting.jpg` | `/services/manufacturing-cost-accounting/` (hero) | A shop-office desk with plain machined parts in steel trays, a notebook, a calculator and a switched-off monitor, looking into an empty, slightly worn machine shop. |
 | `attorney-trust-accounting.jpg` | `/services/attorney-trust-accounting/` (hero) | 3 cloth-bound books with blank spines, a wooden tray of plain folders, a river-stone paperweight and a fountain pen on a worn leather blotter, with sagebrush outside. |

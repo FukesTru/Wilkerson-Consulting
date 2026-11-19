@@ -439,28 +439,215 @@ html.intro-skip .intro { animation: intro-out .25s ease forwards !important; }
   .hero-layout--solo .hero-main { display: flex; }
   .hero-extra { padding-bottom: 88px; }
 }
-/* Home headline: one sentence per line at every width. "Complex Numbers." is
-   7.56em wide, so the size is capped to fit the hero's width (cqi), never above --fs-h1.
-   On a desktop the headline spans the full hero width, so it keeps the full 68px, and the
-   photo sits in the right column beside the copy, stopping above the chat bubble corner.
-   Browsers without container units fall back to --fs-h1. */
-.hero--home .hero-layout { container-type: inline-size; }
-/* the display cut (opsz 60) at every size, so the width stays 7.56em on phones too */
-.hero--home h1 { font-variation-settings: "opsz" 60; font-size: var(--fs-h1); font-size: min(var(--fs-h1), calc(100cqi / 7.72)); }
-.hero--home .hero-media img { aspect-ratio: 2.2 / 1; }
-@media (min-width: 960px) {
-  .hero--home .hero-layout {
-    --home-h1: min(var(--fs-h1), calc(100cqi / 7.72));
-    grid-template-areas: "eyebrow eyebrow" "title title" "lede media" "more media" "cta media" "proof media" ". media";
-    grid-template-columns: minmax(0, 1.08fr) minmax(0, .92fr);
-  }
-  .hero--home .hero-media { margin-top: 26px; }
-  .hero--home .hero-media img {
-    aspect-ratio: 4 / 3;
-    /* first screen minus header, hero top, eyebrow, 2 headline lines, gap and the chat zone */
-    max-height: max(200px, calc(100vh - var(--header-h) - var(--hero-top) - 48px - 2.1 * 68px - 26px - var(--chat-zone) - 16px));
-  }
+/* Home page, revision 7: the "Reno Window" look. Only the home page uses these classes.
+   Hero: the full-width window photo under a 105 degree navy wash, everything centred. The copy
+   sits above a band at the bottom of the first screen that is kept clear for the chat widget's
+   welcome bubble, so the bubble never covers the buttons.
+   Headline: one sentence per line at every width. "Complex Numbers." is 7.56em wide in the
+   display cut (opsz 60), so the size is capped to fit the hero's width (cqi). */
+.hero--window { position: relative; isolation: isolate; overflow: hidden; padding: 0; background: var(--navy-3); color: var(--white); }
+.hero--window :focus-visible { outline-color: var(--white); }
+.hero-window__photo { position: absolute; inset: 0; z-index: -1; }
+.hero-window__photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 45%; }
+.hero-window__photo::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(105deg, rgba(15, 26, 49, .93) 0%, rgba(20, 33, 61, .86) 42%, rgba(20, 33, 61, .62) 70%, rgba(20, 33, 61, .5) 100%);
 }
+.hero-window__in {
+  container-type: inline-size;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;
+  min-height: clamp(540px, calc(100vh - var(--header-h)), 900px);
+  min-height: clamp(540px, calc(100svh - var(--header-h)), 900px);
+  padding-top: 40px; padding-bottom: var(--chat-zone);
+}
+.hero--window .eyebrow { margin: 0; gap: 0; justify-content: center; color: var(--bronze-light); }
+.hero--window .eyebrow::before { margin-right: 12px; }
+.hw-narrow { display: none; }
+.hero--window h1 {
+  --fs-h1-window: clamp(2.75rem, 1rem + 5.6vw, 5.25rem);
+  margin: 22px 0 0; color: var(--white); line-height: 1.04; letter-spacing: -.025em;
+  font-variation-settings: "opsz" 60;
+  font-size: var(--fs-h1-window); font-size: min(var(--fs-h1-window), calc(100cqi / 7.72));
+  text-shadow: 0 2px 30px rgba(8, 14, 28, .35);
+}
+.hero-window__lede { margin: 22px 0 0; max-width: 46em; font-size: var(--fs-lead); line-height: 1.55; color: rgba(255, 255, 255, .9); text-wrap: balance; }
+.hero--window .hero-cta { margin: 34px auto 0; }
+@media (min-width: 480px) { .hero--window .hero-cta { width: 100%; max-width: 520px; } }
+.btn--outline-light { background: rgba(255, 255, 255, .06); color: var(--white); border-color: rgba(255, 255, 255, .6); }
+.btn--outline-light:hover { background: rgba(255, 255, 255, .16); color: var(--white); }
+.hero-chips { list-style: none; margin: 36px 0 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; max-width: 760px; }
+.hero-chips li {
+  display: inline-flex; align-items: center; gap: 8px; padding: 7px 14px; font-size: .875rem; line-height: 1.3;
+  color: rgba(255, 255, 255, .92); background: rgba(255, 255, 255, .08); border: 1px solid rgba(255, 255, 255, .24); border-radius: 8px;
+}
+.hero-chips svg { width: 15px; height: 15px; color: var(--bronze-light); stroke-width: 2.5; }
+@media (max-width: 959px) {
+  .hero-window__in { padding-top: 28px; }
+  .hero--window h1 { margin-top: 16px; }
+  .hero-window__lede { margin-top: 14px; }
+  .hero--window .hero-cta { margin-top: 24px; }
+  .hero-chips { margin-top: 24px; gap: 8px 6px; }
+  .hero-chips li { gap: 6px; font-size: .78125rem; padding: 6px 10px; }
+  .hero-chips svg { width: 14px; height: 14px; }
+  .hero-window__photo img { object-position: 64% 50%; }
+}
+@media (max-width: 599px) {
+  .hw-wide { display: none; }
+  .hw-narrow { display: inline; }
+  .hero--window .eyebrow::before { display: none; }
+}
+
+/* Sage band: what Ray does, in 4 short lines */
+.pillars { background: var(--sage); color: var(--white); }
+.pillars__list { list-style: none; margin: 0; padding: 26px 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 16px; text-align: center; }
+.pillars__list li { display: flex; flex-direction: column; gap: 3px; }
+.pillars__list strong { color: var(--white); font-size: 1rem; line-height: 1.35; font-weight: 600; }
+.pillars__list span { color: rgba(255, 255, 255, .82); font-size: .875rem; line-height: 1.45; }
+@media (min-width: 960px) {
+  .pillars__list { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; padding: 28px 0; }
+  .pillars__list li { padding: 0 12px; }
+  .pillars__list li + li { border-left: 1px solid rgba(255, 255, 255, .2); }
+}
+
+/* The WIP chart: earned revenue against the amount billed on one illustrative job. Lines and
+   shading are drawn in SVG and stretch to the card; the labels are HTML, so the text stays the
+   same size at every width. Phones get the simple version: 3 month labels, 1 word per note. */
+[aria-labelledby="wip-heading"] .section-head { max-width: 780px; }
+[aria-labelledby="areas-heading"] .section-head { max-width: 860px; }
+[aria-labelledby="wip-heading"] .section-head p { text-wrap: pretty; }
+.wip-chart {
+  margin: 0; background: var(--white); border-radius: 20px; padding: 22px 16px 18px;
+  box-shadow: 0 1px 2px rgba(20, 33, 61, .05), 0 24px 60px -34px rgba(20, 33, 61, .35);
+}
+.wip-chart__plot { position: relative; height: 230px; margin: 34px 4px 34px; }
+.wip-chart__plot svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.wc-grid line { stroke: var(--navy); stroke-opacity: .08; stroke-width: 1; }
+.wc-grid .wc-base { stroke-opacity: .22; }
+.wc-area--over { fill: var(--bronze); fill-opacity: .22; }
+.wc-area--under { fill: var(--sage); fill-opacity: .22; }
+.wc-line { fill: none; stroke-width: 3.5; stroke-linecap: round; stroke-linejoin: round; }
+.wc-line--earned { stroke: var(--navy); }
+.wc-line--billed { stroke: var(--bronze); }
+.wc-labels { position: absolute; inset: 0; font-size: .8125rem; line-height: 1.25; color: var(--muted); }
+.wc-y { position: absolute; left: -12px; transform: translate(-100%, -50%); font-variant-numeric: tabular-nums; }
+.wc-x { position: absolute; top: calc(100% + 10px); transform: translateX(-50%); white-space: nowrap; }
+.wc-x--first { transform: none; }
+.wc-x--last { transform: translateX(-100%); }
+.wc-dot { position: absolute; width: 14px; height: 14px; margin: -7px 0 0 -7px; border-radius: 50%; background: var(--white); border: 3px solid var(--bronze); }
+.wc-dot--under { border-color: var(--sage); }
+.wc-lead { position: absolute; width: 0; margin-left: -.75px; border-left: 1.5px solid var(--bronze); }
+.wc-lead--under { border-color: var(--sage); }
+.wc-note { position: absolute; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; text-align: center; white-space: nowrap; font-size: .8125rem; color: var(--text); }
+.wc-note strong { font-size: .875rem; font-weight: 700; color: #96693F; }
+.wc-note--under strong { color: var(--sage); }
+/* Phone positions: notes above (overbilled) and below (underbilled) the lines */
+.wc-note--over { bottom: 50%; }
+.wc-lead--over { top: calc(50% + 4px); bottom: calc(28% + 10px); }
+.wc-lead--under { top: calc(30% + 10px); bottom: calc(52% + 4px); }
+.wc-note--under { top: 48%; left: 75%; }
+.wc-y, .wc-wide { display: none; }
+.wip-chart__legend {
+  display: flex; flex-direction: column; align-items: flex-start; gap: 8px;
+  padding-top: 16px; border-top: var(--border); font-size: .875rem; font-weight: 600; line-height: 1.4; color: var(--text);
+}
+.wc-key { display: inline-flex; align-items: center; gap: 10px; }
+.wc-swatch { display: inline-block; flex-shrink: 0; width: 22px; height: 3.5px; border-radius: 2px; }
+.wc-swatch--earned { background: var(--navy); }
+.wc-swatch--billed { background: var(--bronze); }
+.wc-illus { font-size: .8125rem; font-weight: 500; color: var(--muted); }
+@media (min-width: 720px) {
+  .wip-chart { padding: 34px 40px 24px; }
+  .wip-chart__plot { height: 300px; margin: 14px 4px 38px 44px; }
+  .wc-y, .wc-wide { display: block; }
+  .wc-x.wc-wide { display: block; }
+  .wc-labels, .wc-note { font-size: .875rem; }
+  .wc-note strong { font-size: .9375rem; }
+  .wc-note--over { bottom: 56%; }
+  .wc-lead--over { top: calc(44% + 6px); }
+  .wc-lead--under { bottom: calc(46% + 6px); }
+  .wc-note--under { top: 54%; }
+  .wip-chart__legend { flex-direction: row; flex-wrap: wrap; align-items: center; gap: 8px 28px; }
+  /* The note gets its own line on the left, so the card's bottom-right corner, where the chat
+     bubble opens, holds nothing to read */
+  .wc-illus { flex-basis: 100%; }
+}
+@media (min-width: 1024px) {
+  .wip-chart { padding: 36px 48px 24px; }
+  /* Short laptop screens get a shorter plot, so the whole card fits between the header and
+     the chat bubble when it is in view */
+  .wip-chart__plot { height: clamp(240px, calc(100vh - 500px), 340px); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  /* the transitions sit on the in-view state only, so nothing animates while the page loads */
+  .reveal-ready .wip-chart .wc-lines { clip-path: inset(-12px 100% -12px -12px); }
+  .reveal-ready .wip-chart.is-in .wc-lines { clip-path: inset(-12px -12px -12px -12px); transition: clip-path 1.6s var(--ease) .3s; }
+  .reveal-ready .wip-chart .wc-mark { opacity: 0; }
+  .reveal-ready .wip-chart.is-in .wc-mark { opacity: 1; transition: opacity .6s var(--ease) 1.5s; }
+}
+
+/* Quote band, pale sage */
+.quote-band { background: #E9EFED; padding: 64px 0; }
+@media (min-width: 960px) { .quote-band { padding: 88px 0; } }
+.quote-band__in { max-width: 960px; display: flex; flex-direction: column; align-items: center; text-align: center; }
+.quote-band__quote { margin: 4px 0 28px; }
+.quote-band__quote blockquote { margin: 0; }
+.quote-band__quote p { margin: 0; font-family: var(--font-head); font-weight: 500; font-size: clamp(1.375rem, 1.05rem + 1.4vw, 2rem); line-height: 1.42; color: var(--navy); text-wrap: balance; }
+.quote-band__quote figcaption { margin-top: 20px; font-size: var(--fs-small); line-height: 1.5; color: var(--muted); text-wrap: balance; }
+.quote-band__quote figcaption strong { color: var(--navy); }
+.quote-band .btn--light { border-color: rgba(20, 33, 61, .16); }
+
+/* Service cards: white, a sage edge on the left, one line each */
+.svc-cards { display: grid; gap: 16px; }
+@media (min-width: 720px) { .svc-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; } }
+@media (min-width: 1024px) { .svc-cards { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.svc-card {
+  display: flex; flex-direction: column; gap: 10px; height: 100%; padding: 24px 22px;
+  background: var(--white); border: var(--border); border-left: 3px solid var(--sage); border-radius: 4px var(--radius) var(--radius) 4px;
+  box-shadow: var(--shadow); color: inherit; text-decoration: none;
+  transition: transform .25s var(--ease), box-shadow .25s var(--ease);
+}
+.svc-card:hover { color: inherit; transform: translateY(-3px); box-shadow: var(--shadow-lift); }
+.svc-card:hover .text-link { text-decoration: underline; }
+.svc-card__head { display: flex; flex-direction: column; align-items: flex-start; gap: 14px; }
+.svc-card__icon { width: 44px; height: 44px; flex-shrink: 0; border-radius: 10px; display: inline-flex; align-items: center; justify-content: center; background: var(--cream); color: var(--sage); }
+.svc-card__icon svg { width: 22px; height: 22px; }
+.svc-card h3 { margin: 0; font-size: 1.1875rem; }
+.svc-card p { margin: 0; font-size: 1rem; line-height: 1.55; color: var(--text); }
+.svc-card .text-link { margin-top: auto; padding-top: 6px; font-size: .9375rem; }
+@media (max-width: 719px) {
+  .svc-card { padding: 20px 20px; gap: 8px; }
+  .svc-card__head { flex-direction: row; align-items: center; }
+  .svc-card__icon { width: 40px; height: 40px; }
+}
+
+/* Meet Ray, then the 4 steps in one row */
+.owner-split { display: grid; gap: 36px; }
+@media (min-width: 960px) { .owner-split { grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: 72px; align-items: center; } }
+.owner-split h2 { margin-bottom: 14px; }
+.owner-split .lead { color: var(--navy); font-weight: 500; }
+.timeline.timeline--compact li { padding-bottom: 20px; }
+.timeline.timeline--compact h3 { font-size: 1.0625rem; margin-bottom: 2px; }
+.timeline.timeline--compact p { margin: 0; font-size: .9375rem; line-height: 1.5; color: var(--muted); }
+.section.owner-band { padding-bottom: 40px; }
+@media (min-width: 960px) { .section.owner-band { padding-bottom: 56px; } }
+@media (max-width: 719px) { .timeline.timeline--compact p { display: none; } .timeline.timeline--compact li { padding-bottom: 16px; } }
+.section.process-band { padding-top: 0; }
+.h2--sm { font-size: clamp(1.5rem, 1.3rem + .8vw, 1.875rem); margin-bottom: 20px; }
+@media (min-width: 960px) { .steps.steps--row { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; } }
+.process-links { display: flex; flex-wrap: wrap; gap: 12px 32px; margin: 24px 0 0; }
+/* Phones: the steps become a short numbered list, number on the left */
+@media (max-width: 719px) {
+  .steps.steps--row { grid-template-columns: minmax(0, 1fr); gap: 10px; }
+  .steps.steps--row li { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 2px 14px; padding: 16px 18px; }
+  .steps.steps--row li::before { grid-row: span 2; margin: 0; }
+  .steps.steps--row h3 { margin: 0; align-self: center; }
+}
+/* Areas: 4 compact links, then Remote Services */
+@media (max-width: 719px) {
+  .area-links.link-cards.link-cards--4 { gap: 10px; }
+  .area-links .link-card { padding: 14px 18px; }
+}
+.area-remote { margin: 20px 0 0; }
 
 /* Service icon cards (home and the services page): icon and label share a row above the title */
 .service-card__head { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
