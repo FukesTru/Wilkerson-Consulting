@@ -439,18 +439,18 @@ html.intro-skip .intro { animation: intro-out .25s ease forwards !important; }
   .hero-layout--solo .hero-main { display: flex; }
   .hero-extra { padding-bottom: 88px; }
 }
-/* Home headline: one sentence per line at every width. "Every dollar accounted for." is
-   10.53em wide, so the size is capped to fit the hero's width (cqi), never above --fs-h1.
+/* Home headline: one sentence per line at every width. "Complex Numbers." is
+   7.56em wide, so the size is capped to fit the hero's width (cqi), never above --fs-h1.
    On a desktop the headline spans the full hero width, so it keeps the full 68px, and the
    photo sits in the right column beside the copy, stopping above the chat bubble corner.
    Browsers without container units fall back to --fs-h1. */
 .hero--home .hero-layout { container-type: inline-size; }
-/* the display cut (opsz 60) at every size, so the width stays 10.53em on phones too */
-.hero--home h1 { font-variation-settings: "opsz" 60; font-size: var(--fs-h1); font-size: min(var(--fs-h1), calc(100cqi / 10.75)); }
+/* the display cut (opsz 60) at every size, so the width stays 7.56em on phones too */
+.hero--home h1 { font-variation-settings: "opsz" 60; font-size: var(--fs-h1); font-size: min(var(--fs-h1), calc(100cqi / 7.72)); }
 .hero--home .hero-media img { aspect-ratio: 2.2 / 1; }
 @media (min-width: 960px) {
   .hero--home .hero-layout {
-    --home-h1: min(var(--fs-h1), calc(100cqi / 10.75));
+    --home-h1: min(var(--fs-h1), calc(100cqi / 7.72));
     grid-template-areas: "eyebrow eyebrow" "title title" "lede media" "more media" "cta media" "proof media" ". media";
     grid-template-columns: minmax(0, 1.08fr) minmax(0, .92fr);
   }

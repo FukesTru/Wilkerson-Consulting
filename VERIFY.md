@@ -56,7 +56,7 @@ Nothing on the site was made up. Where we did not have a fact, we wrote the page
 
 - Your story in short: you merged your public accounting firm with a larger regional firm in 1994; in 1998 you started a family commercial cleaning business and over 20 years grew it into a decorative and polished concrete installation, restoration and maintenance company with **sales of $2.5 to $3.0 million a year**; then you returned to accounting as a contract and Fractional CFO and controller. Please confirm you are happy for the sales figure to be public.
 - "At W. W. Nash & Sons, Inc. in Richmond, Virginia, Ray helped create and refine the company's WIP process and set up audit procedures and internal processes." This comes from Mr. Hoover's letter. Please confirm you are happy to name the company.
-- The main heading now reads "Every job costed. Every dollar accounted for." Tell us if you would like different wording.
+- The main heading now reads "Complex Numbers. Clear Answers." Tell us if you would like different wording.
 
 ### About page
 
