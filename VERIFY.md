@@ -68,17 +68,17 @@ Nothing on the site was made up. Where we did not have a fact, we wrote the page
 
 ### Testimonials page
 
-The Recommendations page is now called Testimonials (www.wilkersonconsulting.com/testimonials/). The old address forwards there.
+The Recommendations page is now called Testimonials (www.wilkersonconsulting.com/testimonials/). The old address forwards there. The page was shortened: the heading is "A Reputation Built on Trust", with Mr. Hoover's WIP sentence as the featured quote, then 2 cards of short excerpts, the full letters, 2 short expertise cards and the contact form.
 
 - **Permission.** The page quotes Adam Hoover (Vice President, W.W. Nash and Sons Inc., letter dated June 19, 2025) and Jacob D. Favaro, CPA, CFP® (Partner in-charge of Tax Services, Richmond, VA office, Brown Edwards, letter dated July 30, 2026), with their names, titles and companies. Each letter is shown with the writer's initials in a circle; no logos, signatures or photos of them. Please confirm both have agreed to appear on a public website. Some CPA firms have rules about partners giving public recommendations, so please check with Mr. Favaro that Brown Edwards is comfortable with it.
 - The company name is spelled as each letter spells it: "W.W. Nash and Sons Inc." (Mr. Hoover) and "W. W. Nash & Sons, Inc." (Mr. Favaro).
-- The excerpts quote the parts of the letters about your work, word for word: 8 sentences from Mr. Hoover's letter and 5 from Mr. Favaro's, including his line that you are a member of the Construction Financial Managers Association and have attended several Brown Edwards webinar classes.
-- **The full letters are now on the page too** ("Read the full letters"), as page images and as PDFs anyone can open or download, exactly as you sent them. You chose to publish them unredacted. Please confirm, before launch, that you are comfortable with everything they show publicly:
+- The cards quote 3 sentences from each letter, word for word. Mr. Hoover: your contributions over 14 months, the records cleanup for a 79-year-old family business, and "His efforts laid a solid foundation for more reliable financial reporting moving forward." Mr. Favaro: work product "far superior" to prior years, the year-end closings and tax schedules, and your knowledge of accounting and construction taxation. In the cards Mr. Favaro is shown as "Partner in-charge of Tax Services, Brown Edwards"; the full letter card keeps "Richmond, VA office".
+- **"Fractional CFO & Controller Work"** now appears as an "Experience" card on this page, linking to your story on the About page. It is not listed as a service (see Part A, item 12). Please confirm the line "Senior finance support for established companies that don't need a full-time CFO." describes the work.
+- **The full letters are on the page too** ("Read the Full Recommendations"), as page images and as PDFs anyone can open or download, exactly as you sent them. You chose to publish them unredacted. Please confirm, before launch, that you are comfortable with everything they show publicly:
   - both letters are addressed to the Virginia Board of Accountancy and recommend the "renewal" (Mr. Hoover) and "reinstatement" (Mr. Favaro) of your CPA license, while the rest of the site presents you as "CPA, Virginia license #5165" (see the CPA credential item above, which should be settled first);
   - Mr. Hoover's direct phone number, email address and office address, and both signatures;
   - Brown Edwards' office address, phone and fax, and the W.W. Nash and Brown Edwards logos.
   Please also confirm that Mr. Hoover and Mr. Favaro have agreed to their full letters, with these details, being published.
-- The excerpts are shown in an order that reads well, which may not be the order of the letter. Tell us if you prefer the letter's order.
 
 ### Services pages
 

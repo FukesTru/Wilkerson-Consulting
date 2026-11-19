@@ -494,6 +494,40 @@ html.intro-skip .intro { animation: intro-out .25s ease forwards !important; }
   .testimonial__head { flex-direction: column; position: sticky; top: calc(var(--header-h) + 24px); align-self: start; }
 }
 
+/* Testimonials page (revision 6). Everything here is scoped to classes only that page uses. */
+.section--compact { padding: 56px 0; }
+@media (min-width: 960px) { .section--compact { padding: 80px 0; } }
+/* Featured quote in the hero, under the lede */
+.hero-quote { margin: 0; padding: 4px 0 4px 20px; border-left: 3px solid var(--bronze); }
+.hero-quote blockquote { margin: 0; }
+.hero-quote p { margin: 0; font-family: var(--font-head); font-weight: 500; font-size: clamp(1.125rem, 1.05rem + .35vw, 1.3125rem); line-height: 1.5; color: var(--navy); }
+.hero-quote figcaption { margin-top: 12px; font-size: var(--fs-small); line-height: 1.5; color: var(--muted); }
+.hero-quote figcaption strong { color: var(--navy); }
+@media (min-width: 960px) { .hero-rest > .hero-quote { grid-area: more; margin-top: 26px; } }
+/* What Business Leaders Say: 2 balanced cards, the first excerpt larger */
+.rec-cards { display: grid; gap: var(--gap); }
+@media (min-width: 768px) { .rec-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.rec-card { display: flex; flex-direction: column; gap: 14px; height: 100%; background: var(--white); border: var(--border); border-radius: var(--radius); box-shadow: var(--shadow); padding: var(--card-pad); }
+@media (min-width: 960px) { .rec-card { padding: 40px; } }
+.rec-card .quote-mark { margin-bottom: 4px; }
+.rec-card blockquote { margin: 0; }
+.rec-card__lead p { margin: 0; font-family: var(--font-head); font-weight: 500; font-size: clamp(1.25rem, 1.12rem + .6vw, 1.5rem); line-height: 1.4; color: var(--navy); }
+.rec-card__more p { margin: 0; padding-left: 16px; border-left: 2px solid var(--bronze-soft); font-family: var(--font-head); font-size: 1.0625rem; line-height: 1.55; color: var(--text); }
+.rec-card__by { margin-top: auto; display: flex; align-items: center; gap: 14px; padding-top: 20px; border-top: var(--border); }
+.rec-card__by .initials { width: 48px; height: 48px; font-size: 1.0625rem; }
+.rec-card__by p { margin: 0; font-size: var(--fs-small); line-height: 1.45; color: var(--muted); }
+.rec-card__by strong { display: block; font-size: 1rem; color: var(--navy); }
+/* Links to #full-hoover and #full-favaro land with the whole card below the sticky header */
+.letter-sheet-card { scroll-margin-top: calc(var(--header-h) + 20px); }
+/* The Fractional CFO card links to /about/#return-heading; land with its eyebrow in view */
+#return-heading { scroll-margin-top: calc(var(--header-h) + 64px); }
+/* Extra room for the form with its 2 consent boxes (Testimonials contact section only) */
+.contact-section--roomy .form-wrap iframe { min-height: 880px; }
+@media (min-width: 768px) and (max-width: 1023px) { .contact-section--roomy .form-wrap iframe { min-height: 820px; } }
+@media (max-width: 767px) { .contact-section--roomy .form-wrap iframe { min-height: 900px; } }
+@media (max-width: 479px) { .contact-section--roomy .form-wrap iframe { min-height: 1000px; } }
+@media (max-width: 359px) { .contact-section--roomy .form-wrap iframe { min-height: 1060px; } }
+
 /* Testimonials: the original letters, shown in full */
 .letters-jump { margin: -12px 0 28px; }
 .full-letters { display: grid; gap: var(--gap); }
@@ -515,7 +549,7 @@ html.intro-skip .intro { animation: intro-out .25s ease forwards !important; }
 }
 .letter-page:hover img { transform: translateY(-3px); box-shadow: 0 2px 4px rgba(20, 33, 61, .08), 0 22px 40px -20px rgba(20, 33, 61, .5); }
 .letter-page__label {
-  position: absolute; left: 10px; bottom: 10px; display: inline-flex; align-items: center; gap: 6px;
+  position: absolute; left: 10px; top: 10px; display: inline-flex; align-items: center; gap: 6px;
   padding: 6px 12px; border-radius: 999px; background: rgba(20, 33, 61, .88); color: var(--white); font-size: .8125rem; font-weight: 600;
 }
 .letter-page__label svg { width: 14px; height: 14px; }
