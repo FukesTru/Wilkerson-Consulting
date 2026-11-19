@@ -76,7 +76,7 @@ The home page has a new design (revision 7): a full-width photo with the heading
 
 ### Testimonials page
 
-The Recommendations page is now called Testimonials (www.wilkersonconsulting.com/testimonials/). The old address forwards there. The page was shortened: the heading is "A Reputation Built on Trust", with Mr. Hoover's WIP sentence as the featured quote, then 2 cards of short excerpts, the full letters, 2 short expertise cards and the contact form.
+The Recommendations page is now called Testimonials (www.wilkersonconsulting.com/testimonials/). The old address forwards there. Testimonials is now its own item in the main menu, between About and Contact, on every page and on phones (it is no longer inside the About menu; the footer still lists it under the firm's links). The page was shortened: the heading is "A Reputation Built on Trust", with Mr. Hoover's WIP sentence as the featured quote, then 2 cards of short excerpts, the full letters, 2 short expertise cards and the contact form.
 
 - **Permission.** The page quotes Adam Hoover (Vice President, W.W. Nash and Sons Inc., letter dated June 19, 2025) and Jacob D. Favaro, CPA, CFP® (Partner in-charge of Tax Services, Richmond, VA office, Brown Edwards, letter dated July 30, 2026), with their names, titles and companies. Each letter is shown with the writer's initials in a circle; no logos, signatures or photos of them. Please confirm both have agreed to appear on a public website. Some CPA firms have rules about partners giving public recommendations, so please check with Mr. Favaro that Brown Edwards is comfortable with it.
 - The company name is spelled as each letter spells it: "W.W. Nash and Sons Inc." (Mr. Hoover) and "W. W. Nash & Sons, Inc." (Mr. Favaro).
@@ -122,7 +122,8 @@ The Recommendations page is now called Testimonials (www.wilkersonconsulting.com
 
 - No street address is shown (see Part A, item 1). Meetings are "set up by arrangement".
 - **Website form.** The form itself (set up in GoHighLevel) has the heading "GET A FREE CONSULTATION". The website does not say the first conversation is free (see Part A, item 4). Please confirm a free consultation is right, or change the form heading.
-- **Consent checkboxes.** On November 19, 2026 the live form still showed no consent checkboxes. The website leaves room for 2 checkboxes under the message box. Once they are published, please check on a phone that the whole form and the Send button show without scrolling inside the form.
+- **Consent checkboxes.** The live form now shows both consent checkboxes (the required contact consent and the optional marketing opt-in), each with its text and links to the Privacy Policy and Terms. The website reserves enough height for the whole form, both boxes and the SEND TEXT button at every screen width, and on phones and small tablets it leaves extra room under the form, so the button and both boxes can be scrolled clear of the round chat button in the bottom-right corner. Please check on your own phone: scroll to the form, tick both boxes and make sure SEND TEXT is easy to tap.
+- **Both consent texts link to the website's Privacy Policy and Terms at the preview address (wilkerson-consulting.vercel.app).** At go-live, those links in the form (set up in GoHighLevel) need to change to www.wilkersonconsulting.com/privacy/ and /terms/.
 
 ### Privacy policy and terms of use
 

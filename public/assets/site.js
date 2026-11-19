@@ -52,6 +52,14 @@
   });
   document.addEventListener('click', function () { closeSubs(null); });
 
+  /* Testimonials is a top-level menu item. The header is identical on every page, so its active
+     state is set here: on /testimonials/ the link gets aria-current, which the menu styles show. */
+  if (location.pathname === '/testimonials/' || location.pathname === '/testimonials/index.html') {
+    Array.prototype.forEach.call(document.querySelectorAll('.nav-list > li > a[href="/testimonials/"], .mobile-menu nav > ul > li > a[href="/testimonials/"]'), function (a) {
+      a.setAttribute('aria-current', 'page');
+    });
+  }
+
   /* Mobile menu */
   var toggle = document.querySelector('.menu-toggle');
   var menu = document.getElementById('mobile-menu');

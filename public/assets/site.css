@@ -267,7 +267,7 @@ main { display: block; }
 .nav-list { list-style: none; display: flex; align-items: center; gap: 4px; margin: 0; padding: 0; }
 .nav-list > li { position: relative; display: flex; align-items: center; }
 .nav-list > li > a {
-  display: inline-flex; align-items: center; padding: 10px 12px; border-radius: 8px;
+  display: inline-flex; align-items: center; padding: 10px 10px; border-radius: 8px; white-space: nowrap;
   color: var(--navy); text-decoration: none; font-weight: 500; font-size: .96875rem;
 }
 .nav-list > li > a:hover, .nav-list > li > a[aria-current="page"] { background: var(--cream); color: var(--navy); }
@@ -315,7 +315,7 @@ main { display: block; }
 @media (min-width: 1200px) {
   .nav { display: block; }
   .menu-toggle { display: none; }
-  .header-inner { gap: 20px; }
+  .header-inner { gap: 16px; }
 }
 
 /* Mobile menu */
@@ -338,6 +338,8 @@ main { display: block; }
 .mobile-menu details[open] summary svg { transform: rotate(180deg); }
 .mobile-menu details ul { padding: 0 0 12px 14px; border-left: 2px solid var(--bronze-soft); margin: 0 0 12px 4px; }
 .mobile-menu nav details a { min-height: 44px; font-weight: 500; font-size: 1rem; color: var(--text); }
+/* The current top-level page in the phone menu (set by site.js; used by Testimonials) */
+.mobile-menu nav > ul > li > a[aria-current="page"] { color: var(--sage); text-decoration: underline; text-decoration-color: var(--bronze); text-decoration-thickness: 2px; text-underline-offset: 6px; }
 .mobile-menu-actions { display: grid; gap: 12px; margin-top: 28px; }
 .mobile-menu-actions .btn { width: 100%; }
 body.menu-open { overflow: hidden; }
@@ -709,11 +711,12 @@ html.intro-skip .intro { animation: intro-out .25s ease forwards !important; }
 /* The Fractional CFO card links to /about/#return-heading; land with its eyebrow in view */
 #return-heading { scroll-margin-top: calc(var(--header-h) + 64px); }
 /* Extra room for the form with its 2 consent boxes (Testimonials contact section only) */
-.contact-section--roomy .form-wrap iframe { min-height: 880px; }
-@media (min-width: 768px) and (max-width: 1023px) { .contact-section--roomy .form-wrap iframe { min-height: 820px; } }
-@media (max-width: 767px) { .contact-section--roomy .form-wrap iframe { min-height: 900px; } }
-@media (max-width: 479px) { .contact-section--roomy .form-wrap iframe { min-height: 1000px; } }
-@media (max-width: 359px) { .contact-section--roomy .form-wrap iframe { min-height: 1060px; } }
+.contact-section--roomy .form-wrap iframe { min-height: 985px; }
+@media (min-width: 768px) and (max-width: 1023px) { .contact-section--roomy .form-wrap iframe { min-height: 940px; } }
+@media (max-width: 767px) { .contact-section--roomy .form-wrap iframe { min-height: 985px; } }
+@media (max-width: 479px) { .contact-section--roomy .form-wrap iframe { min-height: 1100px; } }
+@media (max-width: 399px) { .contact-section--roomy .form-wrap iframe { min-height: 1150px; } }
+@media (max-width: 359px) { .contact-section--roomy .form-wrap iframe { min-height: 1270px; } }
 
 /* Testimonials: the original letters, shown in full */
 .letters-jump { margin: -12px 0 28px; }
@@ -1011,20 +1014,31 @@ a.card:hover .text-link { text-decoration: underline; }
   scroll-margin-top: calc(var(--header-h) + 16px);
 }
 @media (min-width: 768px) { .form-wrap { padding: 20px; } }
-.form-wrap iframe { display: block; width: 100%; min-height: 840px; border: 0; }
+.form-wrap iframe { display: block; width: 100%; border: 0; }
 /* The form now ends with 2 consent checkboxes. These floors leave room for the whole form, both
    boxes and the button at each width, so nothing scrolls inside the frame even if the form's own
-   script does not resize it. Narrower frames wrap the consent text onto more lines. */
-@media (min-width: 768px) and (max-width: 1023px) { .form-wrap iframe { min-height: 780px; } }
+   script does not resize it. Narrower frames wrap the consent text onto more lines.
+   Revision 8: re-measured against the live form with its real consent text (November 19, 2026),
+   which runs to about 1,055px in a 338px frame (a 390px phone) and 1,210px in a 268px frame. */
+.form-wrap iframe { min-height: 945px; }
+@media (min-width: 768px) and (max-width: 1023px) { .form-wrap iframe { min-height: 900px; } }
 @media (max-width: 767px) {
   .form-wrap { padding: 6px; }
-  .form-wrap iframe { min-height: 860px; }
+  .form-wrap iframe { min-height: 945px; }
 }
 @media (max-width: 479px) {
-  .form-wrap iframe { min-height: 960px; }
+  .form-wrap iframe { min-height: 1060px; }
+}
+@media (max-width: 399px) {
+  .form-wrap iframe { min-height: 1110px; }
 }
 @media (max-width: 359px) {
-  .form-wrap iframe { min-height: 1020px; }
+  .form-wrap iframe { min-height: 1230px; }
+}
+/* Phones and small tablets: room under the form, so SEND TEXT and both consent boxes can be
+   scrolled well clear of the round chat button in the bottom-right corner */
+@media (max-width: 768px) {
+  .contact-grid > :last-child { padding-bottom: calc(var(--fab) + var(--fab-bottom) + 24px); }
 }
 .form-note { font-size: .875rem; color: var(--on-navy-muted); margin-top: 16px; }
 
