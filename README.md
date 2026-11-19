@@ -49,6 +49,16 @@ Strain Systems accounting and consulting site (not a law firm). `VERIFY.md` is t
   side card follow below. On desktop the photo stops about 190px above the bottom of the screen, so
   the bottom-right corner where the bubble opens holds only hero background. Long headlines are the
   tight spot: after changing a hero, check that both buttons end above the bottom 200px at 390x844.
+- **Full letters (Nov 20, 2026):** `public/letters/` holds both signed letters exactly as supplied
+  (PDFs plus 1400x1812 page images as WebP and JPG; do not re-encode or edit them). The
+  "Read the full letters" section on `/testimonials/` (`#full-letters`) shows the pages with an
+  accessible lightbox in `site.js` (native `<dialog>`, prev/next, Esc, focus trap, swipe, tap
+  outside to close; without JavaScript the page link opens the JPG). The owner chose to publish
+  the letters in full; they include licence renewal and reinstatement wording, contact details and
+  signatures that the site's own copy never mentions. See `VERIFY.md`.
+- **Home headline:** one sentence per line at every width. On desktop it spans the full hero
+  width at 68px; on smaller screens its size is capped to the hero width (`cqi`), with the
+  display optical size pinned (`opsz` 60) so the width is predictable.
 - **Testimonials (Nov 19, 2026):** `/recommendations/` became `/testimonials/`. `vercel.json`
   redirects `/recommendations` and `/recommendations/` there (301). The old file is kept as a
   noindex stub with a canonical and a meta refresh to `/testimonials/`, and carries no photo, so

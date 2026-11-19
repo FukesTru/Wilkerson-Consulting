@@ -439,11 +439,28 @@ html.intro-skip .intro { animation: intro-out .25s ease forwards !important; }
   .hero-layout--solo .hero-main { display: flex; }
   .hero-extra { padding-bottom: 88px; }
 }
-/* Home: the 2-line headline stays on 2 lines where its column is narrow */
+/* Home headline: one sentence per line at every width. "Every dollar accounted for." is
+   10.53em wide, so the size is capped to fit the hero's width (cqi), never above --fs-h1.
+   On a desktop the headline spans the full hero width, so it keeps the full 68px, and the
+   photo sits in the right column beside the copy, stopping above the chat bubble corner.
+   Browsers without container units fall back to --fs-h1. */
+.hero--home .hero-layout { container-type: inline-size; }
+/* the display cut (opsz 60) at every size, so the width stays 10.53em on phones too */
+.hero--home h1 { font-variation-settings: "opsz" 60; font-size: var(--fs-h1); font-size: min(var(--fs-h1), calc(100cqi / 10.75)); }
 .hero--home .hero-media img { aspect-ratio: 2.2 / 1; }
-@media (min-width: 960px) { .hero--home .hero-media img { aspect-ratio: 10 / 9; } }
-@media (min-width: 960px) and (max-width: 1199px) { .hero--home h1 { font-size: 3.375rem; } }
-@media (max-width: 370px) { .hero--home h1 { font-size: 2.25rem; } }
+@media (min-width: 960px) {
+  .hero--home .hero-layout {
+    --home-h1: min(var(--fs-h1), calc(100cqi / 10.75));
+    grid-template-areas: "eyebrow eyebrow" "title title" "lede media" "more media" "cta media" "proof media" ". media";
+    grid-template-columns: minmax(0, 1.08fr) minmax(0, .92fr);
+  }
+  .hero--home .hero-media { margin-top: 26px; }
+  .hero--home .hero-media img {
+    aspect-ratio: 4 / 3;
+    /* first screen minus header, hero top, eyebrow, 2 headline lines, gap and the chat zone */
+    max-height: max(200px, calc(100vh - var(--header-h) - var(--hero-top) - 48px - 2.1 * 68px - 26px - var(--chat-zone) - 16px));
+  }
+}
 
 /* Service icon cards (home and the services page): icon and label share a row above the title */
 .service-card__head { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
@@ -476,6 +493,60 @@ html.intro-skip .intro { animation: intro-out .25s ease forwards !important; }
   .testimonial { grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: 48px; padding: 40px; }
   .testimonial__head { flex-direction: column; position: sticky; top: calc(var(--header-h) + 24px); align-self: start; }
 }
+
+/* Testimonials: the original letters, shown in full */
+.letters-jump { margin: -12px 0 28px; }
+.full-letters { display: grid; gap: var(--gap); }
+@media (min-width: 900px) { .full-letters { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: stretch; } }
+.letter-sheet-card { display: flex; flex-direction: column; gap: 22px; background: var(--white); border: var(--border); border-radius: var(--radius); box-shadow: var(--shadow); padding: var(--card-pad); }
+.letter-sheet-card .testimonial__head { flex-direction: row; position: static; }
+.letter-sheet-card__actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.letter-sheet-card__actions .btn { flex: 1 1 180px; }
+.letter-pages { list-style: none; margin: auto 0 0; padding: 0; display: grid; gap: 16px; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 480px) {
+  .letter-pages { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .letter-pages--1 { grid-template-columns: minmax(0, 1fr); width: calc(50% - 8px); }
+}
+.letter-page { position: relative; display: block; border-radius: 3px; text-decoration: none; }
+.letter-page img {
+  display: block; width: 100%; height: auto; background: #fff; border: 1px solid var(--line); border-radius: 3px;
+  box-shadow: 0 1px 2px rgba(20, 33, 61, .08), 0 14px 30px -18px rgba(20, 33, 61, .45);
+  transition: transform .25s var(--ease), box-shadow .25s var(--ease);
+}
+.letter-page:hover img { transform: translateY(-3px); box-shadow: 0 2px 4px rgba(20, 33, 61, .08), 0 22px 40px -20px rgba(20, 33, 61, .5); }
+.letter-page__label {
+  position: absolute; left: 10px; bottom: 10px; display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 12px; border-radius: 999px; background: rgba(20, 33, 61, .88); color: var(--white); font-size: .8125rem; font-weight: 600;
+}
+.letter-page__label svg { width: 14px; height: 14px; }
+
+/* Lightbox for the letter pages. A native dialog, so it sits above the chat widget and the
+   round buttons. Pinch-zoom is left to the browser. */
+html.lightbox-open { overflow: hidden; }
+.lightbox {
+  width: 100vw; height: 100vh; height: 100dvh; max-width: none; max-height: none; margin: 0; padding: 0; border: 0;
+  background: rgba(10, 18, 36, .97); color: var(--white); overflow: hidden;
+}
+.lightbox[open] { display: flex; flex-direction: column; }
+.lightbox::backdrop { background: rgba(10, 18, 36, .9); }
+.lightbox__bar { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 16px; }
+.lightbox__caption { margin: 0; font-weight: 600; font-size: .9375rem; line-height: 1.4; }
+.lightbox__stage { flex: 1; min-height: 0; overflow: auto; display: flex; align-items: center; justify-content: center; padding: 0 12px; }
+.lightbox__stage img {
+  display: block; width: auto; height: auto; max-width: min(100%, 1000px); max-height: calc(100vh - 150px); max-height: calc(100dvh - 150px);
+  background: #fff; border-radius: 3px; box-shadow: 0 30px 60px -30px rgba(0, 0, 0, .7);
+}
+.lightbox__nav { display: flex; align-items: center; justify-content: center; gap: 20px; padding: 12px 16px calc(18px + env(safe-area-inset-bottom, 0px)); }
+.lightbox__nav[hidden] { display: none; }
+.lightbox__count { min-width: 96px; text-align: center; font-size: .9375rem; color: var(--on-navy-muted); }
+.lightbox__btn {
+  width: 48px; height: 48px; flex-shrink: 0; border-radius: 50%; border: 0; background: rgba(255, 255, 255, .14); color: var(--white);
+  display: inline-flex; align-items: center; justify-content: center; cursor: pointer; padding: 0;
+}
+.lightbox__btn:hover { background: rgba(255, 255, 255, .24); }
+.lightbox__btn:disabled { opacity: .35; cursor: default; }
+.lightbox__btn svg { width: 22px; height: 22px; }
+.lightbox :focus-visible { outline: 3px solid var(--bronze-light); outline-offset: 3px; }
 
 .steps--compact li { padding: 20px 22px; }
 .steps--compact li::before { width: 34px; height: 34px; font-size: 1rem; margin-bottom: 12px; }
